@@ -1,0 +1,220 @@
+/*-----------------------------------------------------------------------------------------
+                                    FONT IMPORTS
+-----------------------------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Erica+One&display=swap');
+
+
+/*-----------------------------------------------------------------------------------------
+                                     VARIABLES
+-------------------------------------------------------------------------------------------*/       
+
+:root{
+
+    /*BOXES*/
+    --header-shadow: -1px 5px 15px 2px rgb(65, 63, 63);
+
+    /*COLOURS*/
+    --yellow:rgb(221, 165, 9);
+    --green:rgb(72, 129, 11);
+    --blue:rgb(19, 134, 201);
+    --purple:rgb(76, 6, 185);
+    --bgcolor:rgb(255,255,255);
+    --new-darkturquoise: #3F869E;
+    --charcoal:#626060;
+
+    /*nav colours*/
+    --yellow:rgb(221, 165, 9);
+    --green:rgb(72, 129, 11);
+    --blue:rgb(19, 134, 201);
+    --purple:rgb(76, 6, 185);
+    --newpink: rgb(170, 35, 84);
+    --bgcolor:rgb(240, 248, 248);
+
+    /*FONTS*/
+    --title-font:'Michroma', sans-serif;
+    --text-font:'Roboto', sans-serif;
+
+    /*BORDER RADIUS*/
+    --banner-rad:40px;
+  
+    /*li/a*/
+    --font-size-li:1rem;
+    --font-weight-li: 550;
+
+   /*FORMS*/
+   --form-text-size:1.2rem;
+   --form-input-width:25rem;
+   --form-input-height:2rem;
+   --placeholder-font-size:60vh;
+   --placeholder-text-position:center;
+   --legend-font-size:3rem;
+   --input-border-radius:1vh;
+   --forms-bgcolor: rgb(255, 255, 255);
+
+    /*Headings*/
+    --h1-font-size:2rem;
+    --h2-font-size:2rem;
+}
+
+/*-----------------------------------------------------------------------------------------
+                                       HEAD
+------------------------------------------------------------------------------------------*/
+
+html {
+    background-color: var(--bgcolor);
+   
+
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/*--------------------------------------------------------------------------------------------------
+                 HEADER 
+---------------------------------------------------------------------------------------------------*/   
+/*allows you to have two different sized h1 for example
+:is(article,div)h1{
+    font-size: 20px;
+    color: black;
+ } 
+ :is (container,*/
+:is(header, footer){
+    height: 15vh;
+    background-color: black;
+    box-shadow:var(--header-shadow);
+    font-size: 6vh;
+    display: flex;
+    align-items: center;
+    width: 99vw; 
+}
+header {
+    border-top-right-radius:var(--banner-rad);  
+}
+footer { 
+    border-bottom-right-radius: var(--banner-rad);
+}
+
+@media only screen and (max-width: 1850px){
+    header {
+        height: 12rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align:center;
+        margin-bottom: 3vh;
+    }
+}
+
+header>container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    width:100vw;
+    padding: 3vw;
+}
+
+@media only screen and (max-width: 1850px){
+    header>container {
+        height: 12rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align:center;
+        margin-bottom: 3vh;
+    }
+}
+
+/*--------------------------------------------------------------------------------------------------
+                                 NAVBAR
+---------------------------------------------------------------------------------------------------*/   
+
+header>container>img:nth-child(1){
+border-radius: 20px;
+/* margin-right: 10vw; */
+height: 6vh;
+}
+
+
+
+
+li,a {
+    padding: 1.0625rem;
+    list-style: none;
+    display: inline;
+    font-size: var(--font-size-li);
+    font-family: var(--title-font);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:nth-of-type(1) {
+    color: var(--blue);
+}
+
+a:nth-of-type(2) {
+    color: var(--green);
+}
+
+a:nth-of-type(3) {
+    color: red;
+}
+
+a:nth-of-type(4) {
+    color: var(--newpink);
+}
+
+a:nth-of-type(5) {
+    color: var(--yellow);
+}
+
+a:nth-of-type(6) {
+    color: var(--purple);
+}
+
+a:nth-of-type(7) {
+    color: var(--bgcolor);
+}
+li:hover {
+    color:var(--yellow);
+}
+
+
+
+
+/*--------------------------------------------------------------------------------------------------
+                                 HEADINGS and TEXT
+---------------------------------------------------------------------------------------------------*/  
+
+h1 {
+    font-family: var(--title-font);
+    font-size: var(--h1-font-size);
+    text-align: center;
+    color: var(--new-darkturquoise);
+}
+
+
+
+h2 {
+    font-family: var(--title-font);
+    font-size: var(--h2-font-size);
+    text-align: center;
+    color:var(--green);
+
+}
+
+
+p {
+    font-family: var(--text-font);
+    color:var(--purple);
+    font-size: var(--text-font);
+    text-align: justify;
+}
+
+
